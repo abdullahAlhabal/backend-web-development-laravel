@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\EmployeeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +16,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('department.index');
 });
+
+Route::resource('department', DepartmentController::class);
+
+
+Route::resource('employee', EmployeeController::class);
