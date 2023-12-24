@@ -13,7 +13,7 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
@@ -21,7 +21,7 @@ class EmployeeController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -29,7 +29,7 @@ class EmployeeController extends Controller
      */
     public function store(StoreEmployeeRequest $request)
     {
-        //
+
     }
 
     /**
@@ -37,7 +37,7 @@ class EmployeeController extends Controller
      */
     public function show(Employee $employee)
     {
-        //
+
     }
 
     /**
@@ -45,7 +45,7 @@ class EmployeeController extends Controller
      */
     public function edit(Employee $employee)
     {
-        //
+
     }
 
     /**
@@ -53,7 +53,7 @@ class EmployeeController extends Controller
      */
     public function update(UpdateEmployeeRequest $request, Employee $employee)
     {
-        //
+
     }
 
     /**
@@ -61,6 +61,6 @@ class EmployeeController extends Controller
      */
     public function destroy(Employee $employee)
     {
-        //
+
     }
 }

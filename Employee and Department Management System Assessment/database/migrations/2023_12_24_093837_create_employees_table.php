@@ -13,6 +13,16 @@ return new class extends Migration
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
+
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->integer('age');
+            $table->string('address');
+            $table->string('phone');
+            $table->decimal('salary');
+
+            $table->foreignId('department_id')->constrained()->cascadeOnDelete();
+
             $table->timestamps();
         });
     }
@@ -25,3 +35,6 @@ return new class extends Migration
         Schema::dropIfExists('employees');
     }
 };
+
+
+

@@ -13,7 +13,7 @@ class DepartmentController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
@@ -21,7 +21,7 @@ class DepartmentController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -29,7 +29,7 @@ class DepartmentController extends Controller
      */
     public function store(StoreDepartmentRequest $request)
     {
-        //
+
     }
 
     /**
@@ -37,7 +37,7 @@ class DepartmentController extends Controller
      */
     public function show(Department $department)
     {
-        //
+
     }
 
     /**
@@ -45,7 +45,7 @@ class DepartmentController extends Controller
      */
     public function edit(Department $department)
     {
-        //
+
     }
 
     /**
@@ -53,7 +53,7 @@ class DepartmentController extends Controller
      */
     public function update(UpdateDepartmentRequest $request, Department $department)
     {
-        //
+
     }
 
     /**
@@ -61,6 +61,6 @@ class DepartmentController extends Controller
      */
     public function destroy(Department $department)
     {
-        //
+
     }
 }

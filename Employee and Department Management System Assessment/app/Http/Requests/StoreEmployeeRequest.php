@@ -11,7 +11,7 @@ class StoreEmployeeRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -21,8 +21,15 @@ class StoreEmployeeRequest extends FormRequest
      */
     public function rules(): array
     {
+        /* name , email , age , address , phone , salary , department_id */
         return [
-            //
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255|unique:employees,email',
+            'age' => 'required|numeric|min:18|max:64',
+            'address' => 'required|string',
+            'phone' => 'required|numeric|digits:11',
+            'salary' => 'required|numeric|min:0|max:10000',
+            'department_id' => 'required|numeric|exists:departments,id',
         ];
     }
 }

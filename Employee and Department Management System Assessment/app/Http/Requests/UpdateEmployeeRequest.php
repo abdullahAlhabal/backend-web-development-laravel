@@ -11,7 +11,7 @@ class UpdateEmployeeRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,13 @@ class UpdateEmployeeRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'string|max:255',
+            'email' => 'email|max:255|unique:employees,email',
+            'age' => 'numeric|min:18|max:64',
+            'address' => 'string',
+            'phone' => 'numeric|digits:11',
+            'salary' => 'numeric|min:0|max:10000',
+            'department_id' => 'numeric|exists:departments,id',
         ];
     }
 }
