@@ -15,8 +15,7 @@
 
         <body>
 
-            <h1>Employee and Department Management System Assessment</h1>
-
+            @yield('content')
             <script></script>
         </body>
 
