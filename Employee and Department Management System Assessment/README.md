@@ -15,8 +15,8 @@ This system manages employees and departments, allowing CRUD operations on both 
 - **Programming Languages**: PHP, HTML, JavaScript
 - **Framework**: Laravel
 - **Database**: MySQL
-- **Frontend Libraries**: (List any frontend libraries used)
-- **Other Tools**: Composer
+- **Frontend Libraries**: Blade system 
+- **Other Tools**: Composer , XAMPP , Visual Studio Code 
 
 ## Folder Structure:
 - `/app`: Contains controllers, models, and other PHP files.

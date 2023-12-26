@@ -10,17 +10,32 @@
     department_id
  --}}
 
+ @section('title' , 'List Of Department')
+
 @section('content')
-    <div class="container">
-        <h1> Departments Index page </h1>
-        @foreach ($departments as $department)
-            <h1>{{ $department->name }}</h1>
-            <h1>{{ $department->description }}</h1>
-            <h1>Employees</h1>
-            @foreach ($department->employees as $employee)
-                <h2>{{ $employee->name }}</h2>
-            @endforeach
-            <br>
-        @endforeach
-    </div>
+
+    <nav class="mb-4">
+        <a href="{{ route('department.create') }}"
+            class="link">
+            Add new Department
+        </a>
+    </nav>
+
+    @forelse ($departments as $department)
+        <div>
+            <a href="{{ route('department.show' , ['department' => $department]) }}"
+                @class(['font-bold'])>
+                {{ $department->name }}
+            </a>
+        </div>
+    @empty
+    <p> there are no departments</p>
+    @endforelse
+
+    @if ($departments->count())
+        <nav class="mt-4">
+            {{ $departments->links() }}
+        </nav>
+    @endif
+
 @endsection

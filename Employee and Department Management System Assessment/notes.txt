@@ -1,0 +1,15 @@
+don't forget @csrf
+__________________
+use @isset()
+__________________
+use $department->name ?? old('name') in the form input
+__________________
+use $errors->has('name') in the class attributes
+__________________
+use @error('name') @enderror
+__________________
+use the @include() to include blade pages .
+__________________
+use the @apply with TailwindCss : used to apply a set of CSS styles defined in a utility class to a specific HTML element.
+__________________
+
