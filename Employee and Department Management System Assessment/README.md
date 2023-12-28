@@ -49,11 +49,13 @@ The system uses the following tables:
 
 ## Contact Information
 Connect with me on:
-- **Email**: [dbnkalhbalb@gmail.com](mailto:dbnkalhbalb@gmail.com) .
+- **Email**: [mail me](mailto:dbnkalhbalb@gmail.com) .
 - **LinkedIn** : [Abdullah AlHabal](https://www.linkedin.com/in/engabdullahalhabal/) .
 - **WebSite** : [Abdullah's Website](http://abdullah.infinityfreeapp.com/) .
 - **Bio Links** : [Abdullah's Bio Links](https://abdullahalhbal.bio.link/) .
 
+## EXPLORE MY RESUME 
+[Resume](./Abdullah%20AlHabal%20Resume.pdf)
 
 ## Additional Notes:
 Feel free to explore my repository and join me in this exciting journey of learning and growth in Software Engineering!

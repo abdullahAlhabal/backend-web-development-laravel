@@ -19,10 +19,13 @@ I'm open to collaborations, discussions, and contributions within the tech commu
 
 ## Contact Information
 Connect with me on:
-- Email: [dbnkalhbalb@gmail.com](mailto:dbnkalhbalb@gmail.com) .
-- [LinkedIn](https://www.linkedin.com/in/engabdullahalhabal/) .
-- WebSite : (http://abdullah.infinityfreeapp.com/) .
-- Bio Links : (https://abdullahalhbal.bio.link/) .
+- **Email**: [mail me](mailto:dbnkalhbalb@gmail.com) .
+- **LinkedIn** : [Abdullah AlHabal](https://www.linkedin.com/in/engabdullahalhabal/) .
+- **WebSite** : [Abdullah's Website](http://abdullah.infinityfreeapp.com/) .
+- **Bio Links** : [Abdullah's Bio Links](https://abdullahalhbal.bio.link/) .
+
+## EXPLORE MY RESUME 
+[Resume](./Abdullah%20AlHabal%20Resume.pdf)
 
 ## Formatting
 This README.md is formatted using Markdown to ensure easy readability, clarity, and organization of information.
