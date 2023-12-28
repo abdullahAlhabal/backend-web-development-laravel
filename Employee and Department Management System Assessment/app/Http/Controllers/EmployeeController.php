@@ -7,7 +7,8 @@ use App\Http\Requests\StoreEmployeeRequest;
 use App\Http\Requests\UpdateEmployeeRequest;
 use App\Http\Resources\EmployeeResource;
 use App\Http\Resources\EmployeeCollection;
-
+use App\Http\Resources\DepartmentCollection;
+use App\Models\Department;
 
 class EmployeeController extends Controller
 {
@@ -16,7 +17,7 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        $employees = new EmployeeCollection(Employee::all());
+        $employees = new EmployeeCollection(Employee::paginate());
         return view('employees.index' , compact('employees'));
     }
 
@@ -25,7 +26,8 @@ class EmployeeController extends Controller
      */
     public function create()
     {
-        return view('employees.create');
+        $departments = new DepartmentCollection(Department::all());
+        return view('employees.create' , compact('departments'));
     }
 
     /**
@@ -51,7 +53,8 @@ class EmployeeController extends Controller
      */
     public function edit(Employee $employee)
     {
-        return view('employees.edit' , compact('employee'));
+        $departments = new DepartmentCollection(Department::all());
+        return view('employees.edit' , compact('employee' , 'departments'));
     }
 
     /**
@@ -60,6 +63,7 @@ class EmployeeController extends Controller
     public function update(UpdateEmployeeRequest $request, Employee $employee)
     {
         $employee->update($request->validated());
+        // dd("here");
         return redirect()->route('employee.show' , ['employee' => $employee])->with('success' , 'Employee Successfully Updated');
     }
 

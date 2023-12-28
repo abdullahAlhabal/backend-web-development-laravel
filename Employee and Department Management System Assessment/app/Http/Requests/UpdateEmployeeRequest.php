@@ -23,7 +23,7 @@ class UpdateEmployeeRequest extends FormRequest
     {
         return [
             'name' => 'string|max:255',
-            'email' => 'email|max:255|unique:employees,email',
+            'email' => 'email|max:255',
             'age' => 'numeric|min:18|max:64',
             'address' => 'string',
             'phone' => 'numeric|digits:11',

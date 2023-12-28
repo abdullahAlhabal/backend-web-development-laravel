@@ -12,4 +12,68 @@ use the @include() to include blade pages .
 __________________
 use the @apply with TailwindCss : used to apply a set of CSS styles defined in a utility class to a specific HTML element.
 __________________
+when create|edit an Employee : we need to pass the "$departments" to to the form , so we can use it in select
+we can pass it , using the  $departments = department::all() in the Controller .
 
+// in employee Controller
+public function edit(Employee $employee)
+    {
+        $departments = new DepartmentCollection(Department::all());
+        return view('employees.edit' , compact('employee' , 'departments'));
+    }
+
+// in resources.view.employees.edit
+@section('content')
+    @include('employees.includes.form' , ['employee' => $employee , 'departments' => $departments  ])
+@endsection
+__________________
+
+# in the Form Select
+
+the Wrong is :
+
+    <div>
+        <label for="department_id">Department</label>
+        <select name="department_id" id="department_id"
+        @class(['border-red-500' => $errors->has('department_id')])
+        value="{{ $employee->department->id ?? old() }}"
+        data-te-select-init data-te-select-filter="true"
+        >
+            @forelse ($departments as $department)
+                <option value="{{ $department->id }}">{{ $department->name }}</option>
+            @empty
+                <option value="" disabled> there are no departments</option>
+            @endforelse
+        </select>
+    </div>
+
+The Rigth is :
+
+     <div>
+        <label for="department_id">Department</label>
+        <select name="department_id" id="department_id"
+            @class(['border-red-500' => $errors->has('department_id')])
+            value="{{ $employee->department->id ?? old() }}"
+            data-te-select-init data-te-select-filter="true"
+        >
+                <option value="">Select a Department</option>
+            @forelse ($departments as $department)
+                <option value="{{ $department->id }}"   // take care here to understand the case
+                    @isset($employee)
+
+                        @if($employee && $employee->department->id == $department->id )
+                            selected
+                        @elseif( $department->id == old('department_id'))
+                            selected
+                        @endif
+
+                    @endisset
+                >
+                {{ $department->name }}
+                </option>
+            @empty
+                <option value="" disabled> there are no departments</option>
+            @endforelse
+        </select>
+    </div>
+__________________

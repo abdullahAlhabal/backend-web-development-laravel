@@ -11,11 +11,30 @@
         </a>
     </div>
 
-    <p class="mb-4 text-slate-700">{{ $department->name }}</p>
 
-    @if ($department->description)
-        <p class="mb-4 text-slate-700">{{ $department->description }}</p>
-    @endif
+    <div class="look_card">
+        <p class="info_value p-4">{{ $department->name }}</p>
+
+        @if ($department->description)
+            <p class="info_label p-4">description : </p>
+            <p class="info_value p-4">{{ $department->description }}</p>
+        @endif
+    </div>
+
+    <p class="info_label p-4">Employees : </p>
+
+    <div class="w-full">
+        @forelse ($department->employees as $employee)
+            <div class="look_card">
+                <a href="{{ route('employee.show', ['employee' => $employee]) }}"
+                   class="a_link">
+                    <p class="info_value">{{ $employee->name }}</p>
+                </a>
+            </div>
+        @empty
+            <p class="w-full text-center">There are no employees.</p>
+        @endforelse
+    </div>
 
     <div class="flex gap-2">
 

@@ -14,11 +14,23 @@
             .link{
                 @apply font-medium text-gray-700 underline decoration-pink-500
             }
+            .a_link{
+                @apply block bg-white p-4 shadow rounded-lg hover:bg-gray-100 transition duration-300
+            }
             .error{
                 @apply text-red-500 text-sm
             }
             .success{
                 @apply relative mb-10 rounded border border-green-400 bg-green-100 px-4 py-3 text-lg text-green-700
+            }
+            .info_label{
+                @apply font-bold text-lg mt-4 mb-2
+            }
+            .info_value{
+                @apply text-gray-700
+            }
+            .look_card{
+                @apply bg-white rounded-lg shadow-md my-5
             }
 
             label{
