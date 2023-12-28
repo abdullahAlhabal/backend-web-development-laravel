@@ -77,3 +77,71 @@ The Rigth is :
         </select>
     </div>
 __________________
+
+# for the search
+
+\App\Models\Department::where('name' , 'LIKE' , '%qui%')->get();
+
+# in the Models Department.php , a new function scopeName() using the Eloquent query Builder , so .
+
+public function scopeName(Builder $query , string name) : Builder {
+    return $query->where('name' , 'LIKE' , '%'.name.'%' );
+}
+
+# we can use php artisan tinker
+
+# Tinker :
+    php artisan tinker provides an interactive command-line interface to interact with your Laravel application and its components,
+    allowing you to experiment, test code, and interactively query your application's features using PHP.
+
+# we can use ->tosql()
+
+__________________
+
+when build the searh in the employee.index.blade.php , I get an error ,
+the form doesn't send any variables ,
+
+    so , don't forget the name="" when write the form input . 😅 , and use dd() always 😂
+
+# before
+
+    <form action="{{ route('employee.index') }}"
+        method="GET"
+    >
+        @csrf
+        <input type="text" placeholder="Search Employee by names"
+            value="{{ request('name') }}" class="mb-4">
+        <button type="submit" class="btn">Search</button>
+        <a href="{{ route('employee.index') }}" class="btn">Clear</a>
+    </form>
+
+# After
+
+
+    <form action="{{ route('employee.index') }}"
+        method="GET"
+    >
+        @csrf
+        <input type="text" placeholder="Search Employee by names" name="name" // don't forget the name=""
+            value="{{ request('name') }}" class="mb-4">
+        <button type="submit" class="btn">Search</button>
+        <a href="{{ route('employee.index') }}" class="btn">Clear</a>
+    </form>
+
+__________________
+
+# Search
+
+we need Request $request in the Controller ,
+$request->input('name')
+
+we need to search for this name in the tables
+
+we create a scopeName(Builder $query , string $name) to return a query and the string to search , the function format
+return $query->where('name' , 'LIKE' , '%' . $name . '%' )
+
+then we can use the function in the Controller , under name "name()"
+
+$name = $request->input('name') // get the string from the Form
+$employees = new EmployeeCollection( Employee::when( $name , fn( $query , $name) => $query->name($name) )) // to match the resulst
+

@@ -3,19 +3,29 @@
 namespace App\Http\Controllers;
 
 use App\Models\Department;
+use App\Models\Employee;
 use App\Http\Requests\StoreDepartmentRequest;
 use App\Http\Requests\UpdateDepartmentRequest;
 use App\Http\Resources\DepartmentResource;
 use App\Http\Resources\DepartmentCollection;
+use App\Http\Resources\EmployeeCollection;
+use Illuminate\Http\Request;
 
 class DepartmentController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $departments = new DepartmentCollection(Department::paginate());
+        $name = $request->input('name');
+
+        // $departments = new DepartmentCollection(Department::paginate());
+
+        $departments = new DepartmentCollection(Department::when($name , fn($query , $name ) =>
+            $query->name($name)
+        )->paginate());
+
         return view('departments.index', compact('departments'));
     }
 
@@ -39,10 +49,18 @@ class DepartmentController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Department $department)
+    public function show(Department $department , Request $request)
     {
         $department =  new DepartmentResource($department);
-        return view('departments.show', compact('department'));
+
+        $name = $request->input('name');
+
+        $employees = new EmployeeCollection(Employee::when(
+            $name ,
+            fn($query , $name) => $query->name($name)
+        )->where('department_id' , $department->id )->paginate());
+
+        return view('departments.show', compact('department' , 'employees'));
     }
 
     /**

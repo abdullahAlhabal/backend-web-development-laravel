@@ -25,6 +25,17 @@
             Show Departments
         </a>
 
+
+        <form action="{{ route('employee.index') }}"
+            method="GET"
+        >
+        @csrf
+            <input type="text" placeholder="Search Employee by names" name="name"
+                value="{{ request('name') }}" class="mb-4">
+            <button type="submit" class="btn">Search</button>
+            <a href="{{ route('employee.index') }}" class="btn">Clear</a>
+        </form>
+
     </nav>
 
     <div class="w-full">

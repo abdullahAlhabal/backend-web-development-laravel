@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
 
 class Employee extends Model
 {
@@ -21,5 +22,9 @@ class Employee extends Model
 
     public function department(){
         return $this->belongsTo(Department::class , 'department_id' , 'id');
+    }
+
+    public function scopeName(Builder $query , string $name) :Builder{
+        return $query->where('name' , 'LIKE' , '%' . $name . '%');
     }
 }

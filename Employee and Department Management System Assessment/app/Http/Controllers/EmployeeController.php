@@ -9,15 +9,22 @@ use App\Http\Resources\EmployeeResource;
 use App\Http\Resources\EmployeeCollection;
 use App\Http\Resources\DepartmentCollection;
 use App\Models\Department;
+use Illuminate\Http\Request;
 
 class EmployeeController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $employees = new EmployeeCollection(Employee::paginate());
+        $name = $request->input('name');
+        // dd($name);
+
+        $employees = new DepartmentCollection(Employee::when($name , fn($query , $name ) =>
+            $query->name($name)
+        )->paginate());
+
         return view('employees.index' , compact('employees'));
     }
 

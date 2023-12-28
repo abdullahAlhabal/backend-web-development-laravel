@@ -19,6 +19,16 @@
             class="link">
             Show Employees
         </a>
+
+        <form action="{{ route('department.index') }}" method="GET"
+        >
+        @csrf
+            <input type="text" name="name" placeholder="Search by Name"
+                value="{{ request('name') }}" class="mb-3">
+            <button type="submit" class="btn">Search</button>
+            <a href="{{ route('department.index') }}" class="btn">Clear</a>
+        </form>
+
     </nav>
 
     <div class="w-full">
@@ -31,7 +41,7 @@
                     <p class="info_value">{{ $department->description }}</p>
                     <p class="flex gap-4 mt-5">
                         <small class="info_value">num of employees : </small>
-                        <small class="info_value">{{ $department->employees()->count() }}</small>
+                        <small class="info_value">{{ number_format($department->employees()->count())  }}</small>
                     </p>
                 </a>
             </div>
