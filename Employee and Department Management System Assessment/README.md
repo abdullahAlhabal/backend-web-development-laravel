@@ -54,8 +54,5 @@ Connect with me on:
 - **WebSite** : [Abdullah's Website](http://abdullah.infinityfreeapp.com/) .
 - **Bio Links** : [Abdullah's Bio Links](https://abdullahalhbal.bio.link/) .
 
-## EXPLORE MY RESUME 
-[Resume](./Abdullah%20AlHabal%20Resume.pdf)
-
 ## Additional Notes:
 Feel free to explore my repository and join me in this exciting journey of learning and growth in Software Engineering!

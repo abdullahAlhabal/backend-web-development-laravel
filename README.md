@@ -25,7 +25,8 @@ Connect with me on:
 - **Bio Links** : [Abdullah's Bio Links](https://abdullahalhbal.bio.link/) .
 
 ## EXPLORE MY RESUME 
-[Resume](./Abdullah%20AlHabal%20Resume.pdf)
+[Resume click to download .](./Abdullah%20AlHabal%20Resume.pdf)
+<img height="30" width="40" alt="Resume" src="./Abdullah_AlHabal_Resume.png" >
 
 ## Formatting
 This README.md is formatted using Markdown to ensure easy readability, clarity, and organization of information.
