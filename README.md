@@ -26,7 +26,25 @@ Connect with me on:
 
 ## EXPLORE MY RESUME 
 [Resume click to download .](./Abdullah%20AlHabal%20Resume.pdf)
-<img height="30" width="40" alt="Resume" src="./Abdullah_AlHabal_Resume.png" >
+<img height="auto" width="auto" alt="Resume" src="./Abdullah_AlHabal_Resume.png" >
+
+## Social Connect
+Feel free to connect with me on various platforms:
+- **GitLab** : [gitlab](https://gitlab.com/AbdullahAlhabal).
+- **dev** : [dev](https://dev.to/abdullahsupernova94).
+- **medium** : [medium](https://medium.com/@dbnkalhbalb).
+- **codepen** : [codepen](https://codepen.io/Supernova94).
+- **twitter** : [twitter](https://twitter.com/abood_iteng).
+- **leetcode** : [leetcode](https://linkedin.com/in/engabdullahalhabal).
+- **LinkedIn** : [LinkedIn](https://leetcode.com/supernova94/).
+- **hackerearth** : [hackerearth](https://www.hackerearth.com/@abdullah287).
+- **geeksforgeeks** : [geeksforgeeks](https://auth.geeksforgeeks.org/user/dbnkalhbalb).
+- **topcoder** : [topcoder](https://profiles.topcoder.com/abdullahalhbal).
+- **codechef** : [codechef](https://www.codechef.com/users/peackyblinders).
+- **discord** : [discord](https://discord.gg/QtbCxTR54T).
+- **stackoverflow** : [stackoverflow](https://stackoverflow.com/users/15331688/abdullah-alhabal).
+- **facebook** : [facebook](https://www.facebook.com/profile.php?id=100025366722156).
+- **codeforces** : [codeforces](https://codeforces.com/profile/AbdullahAlHabal).
 
 ## Formatting
 This README.md is formatted using Markdown to ensure easy readability, clarity, and organization of information.
