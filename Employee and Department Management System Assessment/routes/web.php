@@ -15,11 +15,11 @@ use App\Http\Controllers\EmployeeController;
 |
 */
 
+Auth::routes();
+
 Route::get('/', function () {
     return redirect()->route('department.index');
 });
-
 Route::resource('department', DepartmentController::class);
-
-
 Route::resource('employee', EmployeeController::class);
+

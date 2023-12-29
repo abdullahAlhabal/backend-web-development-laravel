@@ -21,7 +21,7 @@ This system manages employees and departments, allowing CRUD operations on both 
 - **Framework**: Laravel
 - **Database**: MySQL
 - **Frontend Libraries**: Blade system , TailwindCss
-- **Other Tools**: Composer , XAMPP , Visual Studio Code 
+- **Other Tools**: Composer , XAMPP , Visual Studio Code , MarkDown 
 
 ## Folder Structure:
 - `/app`: Contains controllers, models, and other PHP files.

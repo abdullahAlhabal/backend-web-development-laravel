@@ -144,4 +144,45 @@ then we can use the function in the Controller , under name "name()"
 
 $name = $request->input('name') // get the string from the Form
 $employees = new EmployeeCollection( Employee::when( $name , fn( $query , $name) => $query->name($name) )) // to match the resulst
+__________________
 
+for Implement User Authentication :
+User Authentication (Optional)
+Implement basic user authentication to restrict access to the CRUD operations.
+Provide a simple login mechanism.
+
+> composer require Laravel/ui
+> php artisan ui bootstrap --auth
+> npm install  && npm run dev
+
+# after that, we need to put the middleware for the routes ,
+
+# we have these routes :
+
+Route::get('/', function () {
+    return redirect()->route('department.index');
+});
+Route::resource('department', DepartmentController::class);
+Route::resource('employee', EmployeeController::class);
+
+# we can Implement the "auth" middleware :
+
+    public function __construct( )
+    {
+        $this->middleware(['auth']);
+
+    }
+in the two Controllers
+__________________
+
+# git tips
+
+git remote add origin <url_to_gitlab_project>
+
+# and we want to edit it from "origin" to "gitlab"
+
+git remote rename origin gitlab
+
+# we want to remove one of the remotes
+
+git remote remove remote_name.
