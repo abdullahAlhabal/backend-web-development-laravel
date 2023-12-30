@@ -1,9 +1,16 @@
-# Abdullah Alhabal's Study Repository
+# Abdullah Alhabal's Project Laravel Repository
 
-## Introduction
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [About Me](#About-Me-🗺)
+
+
+## Introduction 
 Welcome to my study repository! I'm _Abdullah Alhabal_, a Software Engineering student passionate about backend development, **Laravel**, and web development. This repository serves as a collection of my learnings, projects, and explorations in these fields.
 
 ## About Me 🗺
+
 I'm Abdullah, a dedicated learner in the realm of Software Engineering. My enthusiasm lies in understanding the intricacies of backend development, mastering **Laravel**, and delving into various aspects of web development.
 
 ## Study Focus 💬
@@ -62,4 +69,4 @@ This README.md is formatted using Markdown to ensure easy readability, clarity, 
 
 Feel free to explore my repository and join me in this exciting journey of learning and growth in Software Engineering!
 
-**[⬆ back to top](#Abdullah-Alhabal's-Study-Repository)**
+**[⬆ back to top](#Abdullah-Alhabal's-Project-Laravel-Repository)**

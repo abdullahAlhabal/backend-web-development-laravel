@@ -38,7 +38,7 @@ The system uses the following tables:
   - `email`
   - `age`
   - `address`
-  - `phone`
+  - `phone`w
   - `salary`
   - `department_id`
 - `departments`:
