@@ -12,9 +12,9 @@ git clone "https://gitlab.com/AbdullahAlhabal/backend-web-development-laravel.gi
 ```bash
 composer install
 ```
-3. Create a `.env` file from `.env.example` and configure your database settings.
-  3.1. Duplicate `.env.example` and rename it to `.env` 
-  3.2. Configure your database settings in the `.env` file 
+3. Create a `.env` file from `.env.example` and configure your database settings.</br>
+  3.1. Duplicate `.env.example` and rename it to `.env` </br>
+  3.2. Configure your database settings in the `.env` file </br>
 4. Run `php artisan key:generate` to generate an application key.
 ```bash
 php artisan key:generate
