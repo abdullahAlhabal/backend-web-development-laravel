@@ -4,15 +4,34 @@
 This system manages employees and departments, allowing CRUD operations on both entities. It's built to facilitate the management of employee records and department details.
 
 ## Installation Instructions:
-1. Clone the repository. `git clone "https://gitlab.com/AbdullahAlhabal/backend-web-development-laravel.git" `
-2. Run `composer install` to install dependencies. `composer install`
+1. Clone the repository.
+```bash
+git clone "https://gitlab.com/AbdullahAlhabal/backend-web-development-laravel.git"
+```
+2. Run `composer install` to install dependencies.
+```bash
+composer install
+```
 3. Create a `.env` file from `.env.example` and configure your database settings.
-3.1. Duplicate `.env.example` and rename it to `.env` 
-3.2. Configure your database settings in the `.env` file 
-4. Run `php artisan key:generate` to generate an application key. `php artisan key:generate`
-5. Run `php artisan migrate` to migrate the database schema. `php artisan migrate`
-6. Optionally, run `php artisan db:seed` to seed the database with initial data. 'php artisan db:seed'
-7. Serve the Application , start your local server with ' php artisan serve' then open your web browser and navigate to `http://localhost:port_number` (make sure about the port_number 8000 ? )
+  3.1. Duplicate `.env.example` and rename it to `.env` 
+  3.2. Configure your database settings in the `.env` file 
+4. Run `php artisan key:generate` to generate an application key.
+```bash
+php artisan key:generate
+```
+5. Run `php artisan migrate` to migrate the database schema.
+```bash
+php artisan migrate
+```
+6. Optionally, run `php artisan db:seed` to seed the database with initial data.
+```bash
+php artisan db:seed
+```
+7. Serve the Application , start your local server with ' php artisan serve' then open your web browser and navigate to
+```bash
+http://localhost:8000
+```
+(make sure about the port_number 8000 ? )
 
 **you might need to set up XAMPP, WAMP, or any other local server environment**
 
